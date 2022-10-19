@@ -1,14 +1,31 @@
-#include<stdio.h>
-#include<string.h>
+#include <stdio.h>
+#include <string.h>
 
-int main(void)
+// int main(void)
+// {
+//     char firstName[20] = "brian";
+//     char secondName[10] = "mbugua";
+
+//     strncat(firstName,secondName);
+
+//     printf("%s", firstName);
+
+//     return(0);
+// }
+int main()
 {
-    char firstName[10] = "brian";
+    char src[50] = "This is source";
+    char dest[50] = "This is destination";
+
+    char fullName[1] = "brian";
     char secondName[10] = "mbugua";
 
-    strcat(firstName,secondName);
+    strncat(dest, src, 15);
+    strncat(fullName, secondName, 6);
 
-    printf("%s", firstName);
+    printf("Final destination string : |%s|", dest);
 
-    return(0);
+    printf("\nFull name is : |%s|", fullName);
+
+    return (0);
 }
