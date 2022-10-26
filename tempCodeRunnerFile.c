@@ -1,10 +1,6 @@
-   n = 48;
-	while(n<58){
-		putchar(n);
-		n++;
-	}
-	ch = 'a';
-	while(ch<='f'){
-		putchar(ch);
-		ch++;
-	}
+    //  printf("Age: %d\n", kevin.age);
+    //  printf("NAME: %s\n", kevin.name);
+    //  printf("ID: %s\n", kevin.id);
+    //  printf("Grades:\n");
+    //  for(int i = 0;i<5;i++)
+    //     printf("grade[%d]: %d\n", i, kevin.grades[i]);
