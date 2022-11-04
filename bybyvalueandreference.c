@@ -18,27 +18,18 @@ void passByValue(struct student kim){
 
 void passByReference(struct student *p){
     p->age = 14;
-    strcpy(p->name, "byvalue");
+    strcpy(p->name, "changedFromKim");
     strcpy(p->id, "1234byvalue");
     printf("name = %s\n id = %s\n age = %d\n", p->name, p->id, p->age);
-    printf("pass by refrence");
+    printf("after modification by pass by refrence");
 }
 
 
-int main(){
+void main(void){
     struct student kim;
     passByValue(kim);
     passByReference(&kim);
-    // //the members of struct brian has not been changed by the function
-    // printf("the members of struct brian has not been changed by the function\n");
-    // struct student brian;
-    // brian.age = 10;
-    // strcpy(brian.name, "brian");
-    // strcpy(brian.id, "33451818");
-
-    // printf("name = %s\n id = %s\n age = %d\n", brian.name, brian.id, brian.age);
-    // passByReference(&kim);
-    // printf("name = %s\n id = %s\n age = %d\n", brian.name, brian.id, brian.age);
+    printf("\n%s", kim.name);
+    printf("\n");
+    passByValue(kim);
 }
-
-
