@@ -8,9 +8,12 @@ int main(){
     printf("---- read a line----\n");
     fgets(buffer, 50, file_pointer);
     printf("%s\n", buffer);
+
+
+
     printf("---- read and parse data----\n");
     file_pointer = fopen("fprintf_test.txt", "r"); // reset the pointer
-    char str1[10], str2[2], str3[20], str4[2];
+    char str1[10], str2[10], str3[10], str4[10];
     fscanf(file_pointer, "%s %s %s %s", str1, str2, str3, str4);
     printf("Read string1 |%s|\n", str1);
     printf("Read string2 |%s|\n", str2);
