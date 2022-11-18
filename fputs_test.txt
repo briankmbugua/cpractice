@@ -1,0 +1,2 @@
+This is guru99 tutorial on fputs,we dont nedd to use for loop
+Easier than fputc function
