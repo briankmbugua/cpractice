@@ -5,3 +5,12 @@ int main(){
     printf("Total summation is %d\n", add_array(Tab, 5));
     return (0);
 }
+
+int add_array(int *p, int size) {
+    int total = 0;
+    int k;
+    for(k = 0; k < size; k++){
+        total += p[k];
+        return (total);
+    }
+}
