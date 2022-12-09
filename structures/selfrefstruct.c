@@ -8,19 +8,28 @@ struct structure_name
     structure_name * pointer_name;
 }
 */
-struct node
+
+struct dog
 {
-    int data;
+    int age;
 };
 
-struct node nodeOne;//nodeOne is a structure
+int main(){
 
-struct node *ptr;//declaring a pointer to the node structure
-ptr = &nodeOne;//now ptr points to the structure varaible nodeOne
+struct dog my_dog = {5};//creating a structure my_dog from type dog
+
+struct dog *ptr_dog;//declaring a pointer to the dog structure
+ptr_dog = &my_dog;//now ptr_dog points to the structure varaible my_dog
 
 //accessing members using pointers
 //using indirection pointer (*) and (.) operator
 //usng arrow(->)operator or membership operator
+
+(*ptr_dog).age = 10;
+
+
+}
+
 
 
 
