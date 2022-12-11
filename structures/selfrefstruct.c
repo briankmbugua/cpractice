@@ -1,35 +1,34 @@
-#include<stdio.h>
 /*
-A self-referntail structure is a structure that can have members of the same type
+a self-referntial structure is a structure that can have members
+which point to a structure of the same type
+mostly used in dynamic data structures such as trees,linked lists and so on
 SYNTAX
 struct structure_name
 {
     datatype datatype_name;
-    structure_name * pointer_name;
+    structure_name * pointer_name
 }
 */
-
-struct dog
+#include<stdio.h>
+struct ref
 {
-    int age;
+    int data;
+    char val;
+    struct ref* link;
 };
 
-int main(){
-
-struct dog my_dog = {5};//creating a structure my_dog from type dog
-
-struct dog *ptr_dog;//declaring a pointer to the dog structure
-ptr_dog = &my_dog;//now ptr_dog points to the structure varaible my_dog
-
-//accessing members using pointers
-//using indirection pointer (*) and (.) operator
-(*ptr_dog).age = 10;
-//usng arrow(->)operator or membership operator
-ptr_dog->age = 20;
-(*ptr_dog).age = 10;
-printf("%d\n", ptr_dog->age);
+int main()
+{
+    struct ref object1;
+    object1.link = NULL;
+    object1.data = 10;
+    object1.val = 20;
+    struct ref object2;
+    object2.link = NULL;
+    object2.data = 30;
+    object2.val = 40;
+    object1.link = &object2;
+    printf("%d \n", object1.link -> data);
+    printf("%d\n", object1.link -> val);
+    return 0;
 }
-
-
-
-
