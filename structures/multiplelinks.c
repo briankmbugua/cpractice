@@ -1,0 +1,3 @@
+/*
+self referntial structures with multiple links
+*/
