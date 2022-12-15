@@ -27,6 +27,12 @@ int main(){
     head->link->link = current;//head->link means pointing to the second node, therefore head->link->link means the third node
     printf("\nthird node data part %d", current->data);
 
+    current = malloc(sizeof(struct node));
+    current->data = 50;
+    current->link = NULL;
+    head->link->link->link = current;
+    printf("\nfourth node data part %d", current->data);
+
     return 0;
     
 }
