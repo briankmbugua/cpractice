@@ -35,11 +35,21 @@ int main() {
     head->link = current;
     printf("data part from the second node %d",current->data);
 
-    struct node *third = malloc(sizeof(struct node));
-    third->data = 99;
-    third->link = NULL;//since there is no fourth node
-    //modify current link part to point to third node
-    current->link = third;
-    printf("\ndata part from the third node %d",third->data);
+    //this is the first method of inserting the third node
+    //but it is wastefull since you'll have to create as many pointers as the nodes
+    // struct node *third = malloc(sizeof(struct node));
+    // third->data = 99;
+    // third->link = NULL;//since there is no fourth node
+    // //modify current link part to point to third node
+    // current->link = third;
+    // printf("\ndata part from the third node %d",third->data);
+    //METHOD TWO
+    //With the help of the head pointer we can acces the whole list  
+    //therefore we can reuse the current pointer to create a third node
+    current = malloc(sizeof(struct node));
+    current->data = 3;
+    current->link = NULL;
+    head->link->link = current;//updating the link part of the second node to point
+    //to the third node
     return 0;
 } 
