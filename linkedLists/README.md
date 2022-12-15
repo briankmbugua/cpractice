@@ -21,3 +21,11 @@ struct node {
            .
     sturct node *link;       
 ```
+# linkedlist
+
+use malloc to create a head node which you can use to acess all list items in singly linked list
+```c
+struct node *head = malloc(sizeof(struct node))
+```
+# traversing a single inked list
+traversing a single linked list means visiting each node of a single linked list untill the end node is reached

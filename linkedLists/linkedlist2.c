@@ -7,6 +7,8 @@ struct node
     struct node *link;
 };
 
+void count_of_node(struct node *head);
+
 int main() {
     //struct node *head = NULL; //a pointer of type node
                              //intialized to NULL
@@ -51,5 +53,23 @@ int main() {
     current->link = NULL;
     head->link->link = current;//updating the link part of the second node to point
     //to the third node
+
+    count_of_node(head);
     return 0;
 } 
+
+
+    //COUNTING NODES
+    void count_of_node(struct node *head){
+        int count = 0;
+        if(head == NULL)
+        printf("linked list is empty");
+
+        struct node *ptr = NULL;
+        ptr = head;
+        while(ptr != NULL) {
+            count++;
+            ptr = ptr->link;
+        }
+        printf("\n%d", count);
+    }
