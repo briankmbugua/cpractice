@@ -7,14 +7,13 @@
 // }
 
 int main(){
-    // int *p = NULL;
-    // allocate(p);
-    // *p = 42;
-    // printf("%d\n", *p);
-    // free(p);
-    int *p; //int pointer
-    *p = (int *)malloc(sizeof(int));
+    int *p = NULL;
+    allocate(p);
     *p = 42;
-    printf("%d", *p);
+    printf("%d\n", *p);
     free(p);
+    // int *p; //int pointer
+    // *p = (int *)malloc(sizeof(int));
+    // *p = 42;
+    // printf("%d", *p);
 }
