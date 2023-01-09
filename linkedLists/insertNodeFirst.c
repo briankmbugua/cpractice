@@ -45,6 +45,7 @@ int main()
     addFirst(&head, 10);
     addFirst(&head, 20);
     addFirst(&head, 30);
+    addFirst(&head, 50);
     // create a new node with the given data.
 
     printList(head);

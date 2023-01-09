@@ -37,5 +37,4 @@ node addNode(node head, int value){
         p->next = temp;//Point the previous last node to the new node created.
     }
     return head;
-}
-}
+};
